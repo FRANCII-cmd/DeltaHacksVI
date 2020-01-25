@@ -6,4 +6,4 @@
 #  and Adil Feroz                                                         #
 ###########################################################################
 
-import TInterpreter.py, VInterpreter.py
+import TInterpreter, AInterpreter
