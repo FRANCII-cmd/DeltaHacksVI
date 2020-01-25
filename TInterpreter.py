@@ -4,6 +4,6 @@
 def FileOpenFunctions(Testfile):                                 #This for file reading 
     file = open(Testfile, "r")
     file = ''.join(file.readlines())
-    print(file)
+    return(file)
 
 FileOpenFunctions("Sample_Text.txt")
