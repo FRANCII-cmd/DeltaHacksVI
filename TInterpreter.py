@@ -6,6 +6,7 @@ basePath = os.path.dirname(__file__)
 #Open and read text files
 def openFileString(Testfile):
     myfile = open(Testfile, "r")
+    close()
     return ''.join(myfile.readlines())
 
 myFile = openFileString(basePath + "/Text/Sample_Text.txt")
