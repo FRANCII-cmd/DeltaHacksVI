@@ -7,11 +7,15 @@
 #  The following packages must be installed:							  #
 #  soundfile, scipy.io.wavfile, os, librosa, sys						  #
 ###########################################################################
-
-import TInterpreter, AInterpreter, os
+import TInterpreter, AInterpreter, os, open_audio, shutil
 
 basePath = os.path.dirname(__file__)
+audioPath = basePath + "/Audio/SampleVoices-KimBorge.wav"
 
-#First, convert and analyzer audio
-AInterpreter.analyzer(basePath + "/Audio/McMasterUniversity.wav")
+# First, convert and analyze the audio
+shutil.copy(audioPath,"tmp")
+os.system("ffmpeg.exe -i tmp -ar 44k -ac 2 "+audioPath+" -y")
+os.unlink("tmp")
+
+AInterpreter.analyzer(audioPath)
 print("Workings complete!")
