@@ -8,7 +8,7 @@
 #  soundfile, scipy.io.wavfile, os, librosa, sys						  #
 ###########################################################################
 
-import TInterpreter, AInterpreter
+import TInterpreter, AInterpreter, os
 
 basePath = os.path.dirname(__file__)
 
