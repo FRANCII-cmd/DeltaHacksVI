@@ -1,6 +1,5 @@
-# Tedxt Based Interpreter base off of the Natural Language Toolkit 
-#NLTK ONLY Please 
-import os #nltk
+''' 
+import os, image, pytesseract 
 basePath = os.path.dirname(__file__)
 
 #Open and read text files
@@ -11,9 +10,10 @@ def openFileString(Testfile):
 
 myFile = openFileString(basePath + "/Text/Sample_Text.txt")
 
-#Once the file is opened in the above function it will run through the bellow NLTK functions to analyze 
+def Imageread(x):
+	imgtxt = pytesseract.image_to_string(image.open(x))
+	return imgtxt
 
-tokens = myFile.split()
-print(tokens)
-tagged = nltk.pos_tag(tokens)
-#This is a test comment.
+	from nltk.corpus import treebank
+	t = treebank.parsed_sent
+'''
