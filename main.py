@@ -7,3 +7,5 @@
 ###########################################################################
 
 import TInterpreter, AInterpreter
+
+	AInterpreter.analyzer()
