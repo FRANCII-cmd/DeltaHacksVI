@@ -24,12 +24,12 @@ def convertAudio(audioPath):
 
 
         # determines sampling frequency of .wav file 
-        ##os.chdir(basePath)
-        ##sampling_rate, data=read_wav("file_example_WAV_5MG.wav") #would need to 
-        ##print(sampling_rate)
+        os.chdir(basePath)
+        sampling_rate, data=read_wav("file_example_WAV_5MG.wav") #would need to 
+        print(sampling_rate)
         # changes samplying frequency of the.wav file
-        ##if sampling_rate != 44000:
-        #  y, s = librosa.load('file_example_WAV_5MG.wav', sr= 44000)
-        #print(s)
+        if sampling_rate != 44000:
+          y, s = librosa.load('file_example_WAV_5MG.wav', sr= 44000)
+        print(s)
     except Exception as e:
         print("Audio conversion failed. Reason=", e)
